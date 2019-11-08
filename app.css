@@ -10,3 +10,15 @@
     background-color: #ececec;
     border:1px solid #cacaca;
 }
+
+.square{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    text-align: center;
+    line-height: 150px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
