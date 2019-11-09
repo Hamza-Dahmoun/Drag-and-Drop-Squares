@@ -39,9 +39,17 @@ function drop(ev) {
     //getting the data we've stored when we started drag operation (the data is the id of the player element)
     var data = ev.dataTransfer.getData("text");
     //now move the draggable element to the new parent (new droppable element)
-    ev.target.appendChild(document.getElementById(data));    
+    ev.target.appendChild(document.getElementById(data));  
+    
+    //Now lets make the player element black and square again
+    makePlayer_originShape();
 }
 
+function makePlayer_originShape(){
+    let player = document.getElementById("player");
+    player.style.backgroundColor = "#000";
+    player.style.borderRadius = "0%";
+}
 
 //From Mozilla Developer Page:
 //By default, the browser prevents anything from happening when dropping something onto most HTML elements.

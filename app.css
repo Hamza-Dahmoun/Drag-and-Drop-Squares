@@ -47,6 +47,6 @@ h1{
     text-align:center;
     line-height: 140px;
     color: #fff;
-    position: absolute;/*so that the text of this element parent will be below this elements*/
+    position: absolute;/*so that the text of this element parent will be below this elemnt parent*/
     top:0;left:0;
 }
