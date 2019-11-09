@@ -1,6 +1,3 @@
-//This variable will always hold the text that have been erased by the draggable element
-var oldText="";
-
 //First of all lets make the plyer square element draggable
 document.getElementById("player").setAttribute("draggable", true);
 
@@ -12,12 +9,12 @@ function make_playerRed_andCircle(event) {
     event.target.style.backgroundColor = "red";
     //make it circle
     event.target.style.borderRadius = "50%";
-    //store its id as a text in its data
+    //store its id as a text in the event data
     event.dataTransfer.setData("text", event.target.id);
 }
 
 
-//Second of all, lets show to user that all orange squares accepts dropping by colorizing with light green
+//Second of all, lets make all orange squaes droppable
 var squaresDroppable = document.getElementsByClassName("square");
 
 for (let i = 0; i < squaresDroppable.length; i++) {
