@@ -8,3 +8,13 @@ function make_playerRed_andCircle(event){
     event.target.style.backgroundColor = "red";
     event.target.style.borderRadius = "50%";
 }
+
+//Second of all, lets show to user that all orange squares accepts dropping by colorizing with light green
+var squaresDroppable = document.getElementsByClassName("square");
+for(let i = 0; i< squaresDroppable.length; i++){
+    squaresDroppable[i].addEventListener("dragover", makeSquareLightGreen);
+}
+
+function makeSquareLightGreen(event){
+    event.target.style.backgroundColor = "#A9F5BC";
+}
