@@ -28,8 +28,6 @@ function allowDrop(event) {
     event.preventDefault();
     //making the drag and drop event doing the action of moving an element not copying it
     event.dataTransfer.dropEffect = "move";
-    //making the square green so that the user understands it is droppable zone
-    event.target.style.backgroundColor = "#8beea8";
 }
 
 
@@ -39,13 +37,12 @@ for (let i = 0; i < squaresDroppable.length; i++) {
 }
 
 function drop(ev) {
-    ev.preventDefault();
-    //just removeing the text that existed here before, but first we have to store it somewhere
-    oldText = ev.target.innerText;
-    ev.target.innerHTML = "";
+    ev.preventDefault();    
+    
     //getting the data we've stored when we started drag operation (the data is the id of the player element)
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    //now move the draggable element to the new parent (new droppable element)
+    ev.target.appendChild(document.getElementById(data));    
 }
 
 
