@@ -27,6 +27,7 @@ h1{
     margin: 5px;
     padding:0px;
     transition: 0.5s;
+    position:relative;/*so that the draggable element will be 'absolute' relatively to this square element not to body element*/
 }
 
 
@@ -46,4 +47,6 @@ h1{
     text-align:center;
     line-height: 140px;
     color: #fff;
+    position: absolute;/*so that the text of this element parent will be below this elements*/
+    top:0;left:0;
 }
