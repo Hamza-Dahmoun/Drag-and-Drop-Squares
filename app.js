@@ -47,3 +47,9 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
+
+
+//From Mozilla Developer Page:
+//By default, the browser prevents anything from happening when dropping something onto most HTML elements.
+//To change that behavior so that an element becomes a drop zone or is droppable,
+//the element must have both ondragover and ondrop event handler attributes.
