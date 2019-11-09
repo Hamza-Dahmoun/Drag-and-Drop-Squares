@@ -31,3 +31,19 @@ function allowDrop(event) {
     //making the square green so that the user understands it is droppable zone
     event.target.style.backgroundColor = "#8beea8";
 }
+
+
+//Third of all, lets now add the ondrop event to all squares so that they receive the draggable element
+for (let i = 0; i < squaresDroppable.length; i++) {
+    squaresDroppable[i].addEventListener("drop", drop);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    //just removeing the text that existed here before, but first we have to store it somewhere
+    oldText = ev.target.innerText;
+    ev.target.innerHTML = "";
+    //getting the data we've stored when we started drag operation (the data is the id of the player element)
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
